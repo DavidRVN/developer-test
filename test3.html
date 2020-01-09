@@ -1,28 +1,21 @@
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html>
   <head>
   </head>
   <body>
+    <div class="image">
+      <img src="https://goo.gl/kjzfbE" alt="First">
+      <button class="remove"  onclick="eliminar();">X</button>
+    </div>
+    <div class="image">
+      <img src="https://goo.gl/d2JncW" alt="Second">
+      <button class="remove" onclick="eliminar();">X</button>
+    </div>
     <script>
-        function setup() {
-          // Write your code here.
-        }
-
-        // Example case. 
-        document.body.innerHTML = `
-        <div class="image">
-          <img src="https://goo.gl/kjzfbE" alt="First">
-          <button class="remove">X</button>
-        </div>
-        <div class="image">
-          <img src="https://goo.gl/d2JncW" alt="Second">
-          <button class="remove">X</button>
-        </div>`;
-
-        setup();
-
-        document.getElementsByClassName("remove")[0].click();
-        console.log(document.body.innerHTML);
-    </script>
-  </body>
-</html>
+      function eliminar() {
+       var imagen1 = document.querySelectorAll("div")[0];
+       imagen1.parentNode.removeChild(imagen1);
+     }
+   </script>
+ </body>
+ </html>

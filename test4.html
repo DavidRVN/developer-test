@@ -10,10 +10,15 @@
     <script>
       function registerHandlers() {
         var as = document.getElementsByTagName('a');
+        var listado = [];
         for (var i = 0; i < as.length; i++) {
-          as[i].onclick = function() {
-            alert(i);
-            return false;
+          listado.push(i[as]);
+        }
+        for (var i = 0; i < listado.length; i++) {
+          console.log(i);
+            as[i].onclick = function () {
+                console.log(this);
+          return false;
           }
         }
       }
